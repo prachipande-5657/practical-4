@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Table Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            padding: 30px;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 800px;
+        }
+
+        caption {
+            caption-side: top;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        colgroup col:nth-child(1) { background-color: #eef2ff; }
+        colgroup col:nth-child(4) { background-color: #fef3c7; }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        thead th {
+            background-color: #1e3a8a;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+
+        tbody tr:hover {
+            background-color: #e0f2fe;
+        }
+
+        tfoot {
+            background-color: #dbeafe;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="table-container">
+
+<table>
+    <caption>Employee Performance Report - 2026</caption>
+
+    <!-- Column Styling -->
+    <colgroup>
+        <col span="1">
+        <col span="2">
+        <col span="1">
+        <col span="1">
+        <col span="1">
+    </colgroup>
+
+    <!-- Table Header -->
+    <thead>
+        <tr>
+            <th scope="col" rowspan="2">Employee ID</th>
+            <th scope="col" colspan="2">Employee Info</th>
+            <th scope="col" rowspan="2">Department</th>
+            <th scope="col" rowspan="2">Performance Score</th>
+            <th scope="col" rowspan="2">Bonus ($)</th>
+        </tr>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Position</th>
+        </tr>
+    </thead>
+
+    <!-- Table Body -->
+    <tbody>
+        <tr>
+            <th scope="row" id="emp1">E101</th>
+            <td headers="emp1">Alice Johnson</td>
+            <td headers="emp1">Software Engineer</td>
+            <td headers="emp1">IT</td>
+            <td headers="emp1">92</td>
+            <td headers="emp1">5000</td>
+        </tr>
+        <tr>
+            <th scope="row" id="emp2">E102</th>
+            <td headers="emp2">Michael Smith</td>
+            <td headers="emp2">Data Analyst</td>
+            <td headers="emp2">Analytics</td>
+            <td headers="emp2">88</td>
+            <td headers="emp2">4200</td>
+        </tr>
+        <tr>
+            <th scope="row" id="emp3">E103</th>
+            <td headers="emp3">Sophia Brown</td>
+            <td headers="emp3">Project Manager</td>
+            <td headers="emp3">Operations</td>
+            <td headers="emp3">95</td>
+            <td headers="emp3">6000</td>
+        </tr>
+        <tr>
+            <th scope="row" id="emp4">E104</th>
+            <td headers="emp4">James Wilson</td>
+            <td headers="emp4">UI/UX Designer</td>
+            <td headers="emp4">Design</td>
+            <td headers="emp4">85</td>
+            <td headers="emp4">3500</td>
+        </tr>
+    </tbody>
+
+    <!-- Table Footer -->
+    <tfoot>
+        <tr>
+            <td colspan="4">Average Score</td>
+            <td>90</td>
+            <td>Total Bonus: 18,700</td>
+        </tr>
+    </tfoot>
+
+</table>
+
+</div>
+
+</body>
+</html>
